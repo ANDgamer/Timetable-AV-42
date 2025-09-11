@@ -9,12 +9,12 @@
 }
 
 body.num #monday .lesson-7 .section-1,
-body.num #thursday .lesson-5 .section-1 {
+body.num #thursday .lesson-5 .section-1,
+body.num #thursday .lesson-6 .section-1 {
   background-color: var(--main-active-color-2);
 }
 
-body.den #monday .lesson-7 .section-2,
-body.den #thursday .lesson-5 .section-2 {
+body.den #thursday .lesson-5 .section-2{
   background-color: var(--main-active-color-2);
 }
 
@@ -71,7 +71,7 @@ body #tuesday .lesson-3 .section-1 a {
 /* Thursday */
 
 #thursday .lesson .sectionContainer {
-  grid-template-rows: 1fr;
+  grid-template-columns: 1fr;
 }
 
 #thursday .lesson .section {
