@@ -1,0 +1,374 @@
+:root{
+    --swiper-pagination-bottom: 0;
+    --main-active-color-1: #93baf1;
+    --main-active-color-2: #4B5360;
+    --main-gradient-color: #93baf180;
+    --bg-1-color: #313131;
+    --bg-2-color: #3B3B3B;
+    --text-color-1: rgb(225, 225, 225);
+    --text-color-2: rgb(30, 30, 30);
+}
+
+::-webkit-scrollbar {
+    display: none;
+	width: 5px;
+	border-radius: 5px;
+}
+::-webkit-scrollbar-thumb {
+    display: none;
+	border-radius: 5px;
+	background-color: var(--text-color-1);
+}
+
+*,
+*:after,
+*:before {
+	padding: 0;
+	margin: 0;
+	-webkit-tap-highlight-color: #00000000;
+    box-sizing: border-box;
+}
+
+html {
+    height: 100%;
+}
+
+body {
+    height: 100%;
+    margin: 0;
+	padding: 0;
+    background-color: var(--bg-1-color);
+    color: var(--text-color-1);
+    font-family: "Ubuntu", sans-serif;
+    font-style: normal;
+    font-weight: 400;
+    user-select: none;
+    overflow: hidden;
+    display: flex;
+    flex-direction: column;
+}
+
+button {
+    background: none;
+    background-repeat:no-repeat;
+	color: inherit;
+	border: none;
+	padding: 0;
+	font: inherit;
+	cursor: pointer;
+	outline: inherit;
+}
+
+a {
+    color: var(--text-color-1);
+    background-color: var(--main-active-color-2);
+    text-decoration: none;
+    padding: 7px 10px;
+    border-radius: 8px;
+}
+
+/* ------------------------ Header -------------------- */
+
+header {
+    height: 56px;
+    width: 100%;
+    padding: 0 20px;
+    background-color: var(--bg-2-color);
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+header h2 {
+    font-weight: 400;
+}
+
+header h1 {
+    font-size: 1.4em;
+    font-weight: 400;
+    color: var(--main-active-color-1);
+}
+
+button {
+    cursor: pointer;
+    background-position: center;
+    background-size: contain;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+button::before,
+button::after {
+    transition: 0.05s ease-out;
+    position: absolute;
+    content: "";
+    border-radius: 50%;
+}
+
+button::before {
+    opacity: 0.2;
+    width: 0;
+    height: 0;
+}
+
+button::after {
+    width: 20px;
+    height: 20px;
+}
+
+button:active::before,
+button:active::after {
+    background-color: var(--text-color-1);
+    opacity: 0.2;
+}
+
+button:active::before {
+    width: 40px;
+    height: 40px;
+}
+
+button:active::after {
+    width: 20px;
+    height: 20px;
+}
+
+#paintIcon {
+    /* background-image: url(images/paint_2.svg); */
+    background-image: url(images/contact_us.svg);
+    height: 30px;
+    width: 30px;
+}
+
+#reloadIcon {
+    background-image: url(images/reload_2.svg);
+    height: 34px;
+    width: 34px;
+}
+
+/* ------------------------ Content -------------------- */
+
+#content {
+    margin: 0;
+    padding: 0;
+    width: 100%;
+    padding: 0 15px 0 15px;
+    flex: 1;
+    z-index: 1;
+}
+
+.date{
+    position: sticky;
+    top: 0;
+    margin: 8px auto;
+    height: 34px;
+    width: 50%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 1.2em;
+    background-color: var(--bg-2-color);
+    border-radius: 17px;
+}
+
+.date.scrolled {
+   border-top-left-radius: 0;
+   border-top-right-radius: 0;
+   border: 2px solid var(--bg-1-color);
+   border-top: 0;
+}
+
+/* ------------------------ Container -------------------- */
+
+.lessonHeader{
+    width: 100%;
+    height: 30px;
+    color: var(--text-color-2);
+    font-weight: 500;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background-color: var(--main-active-color-1);
+    padding: 0 10px;
+}
+
+.sectionContainer {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-template-rows: 1fr 1fr;
+    gap: 5px;
+}
+
+.lesson {
+    margin-bottom: 15px;
+    border-radius: 10px;
+    overflow: hidden;
+}
+
+.lesson .section {
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+    flex-direction: column;
+    text-align: center;
+    font-size: 0.8em;
+    padding: 10px 5px;
+    gap: 8px;
+    line-height: 1.1em;
+}
+
+.lesson .section .wrapper {
+    font-size: 1.1em;
+    font-weight: 600;
+}
+
+.lesson .section span:last-child {
+    font-size: 1.1em;
+}
+
+.section-1, 
+.section-2,
+.section-3,
+.section-4 {
+    background-color: var(--bg-2-color);
+}
+
+.day {
+    overflow-y: scroll;
+    height: calc(100% - 60px);
+}
+
+/* ------------------------ Footer -------------------- */
+
+.swiper-pagination {
+    height: 60px;
+    width: 100%;
+    background-color: var(--bg-2-color);
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+}
+
+.swiper-pagination div {
+    width: 20%;
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 1.1em;
+    cursor: pointer;
+}
+
+.swiper-pagination div.active {
+    position: relative;
+    /* color: var(--main-active-color-1); */
+    background: var(--main-gradient-color);
+    background: linear-gradient(180deg, var(--main-gradient-color) 0%, var(--bg-2-color) 100%);
+}
+
+.swiper-pagination div.active::before {
+    position: absolute;
+    content: "";
+    top: 0;
+    width: 100%;
+    height: 5px;
+    border-bottom-left-radius: 10px;
+    border-bottom-right-radius: 10px;
+    background-color: var(--main-active-color-1);
+}
+
+.swiper-pagination div.current {
+    color: var(--main-active-color-1);
+}
+
+/* ------------------------ contactPage -------------------- */
+
+#contactPage {
+    visibility: hidden;
+    z-index: 2;
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    cursor: pointer;
+}
+
+#contactPage__bg {
+    z-index: 3;
+    position: fixed;
+    width: 100%;
+    height: 100%;
+    backdrop-filter: blur(20px) contrast(80%);
+}
+
+#contactPage__main {
+    z-index: 4;
+    position: fixed;
+    cursor: auto;
+    width: fit-content;
+    height: fit-content;
+    background-color: var(--bg-1-color);
+    border-radius: 20px;
+    padding: 30px;
+    padding-top: 55px;
+    /* padding-right: 50px; */
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+#contactPage__main span {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 10px;
+    margin-top: 10px;
+    margin-bottom: 15px;
+}
+
+#contactPage__main a:last-child {
+    margin-top: 10px;
+    margin-bottom: 15px;
+    width: fit-content;
+}
+
+#closeIcon {
+    background-image: url(images/close.svg);
+    height: 25px;
+    width: 25px;
+    margin: 20px;
+    position: absolute;    
+    top: 0;
+    right: 0;
+}
+
+.copyIcon {
+    background-image: url(images/copyIcon.svg);
+    height: 25px;
+    width: 25px;
+}
+
+@media (min-width: 1440px) {
+    .day {
+        overflow: visible;
+        height: 100%;
+    }
+
+    .date.current {
+        background-color: var(--main-active-color-1);
+        color: var(--bg-1-color);
+    }
+    
+    #container {
+        overflow: hidden;
+        overflow-y: scroll;
+    }
+
+    #footer {
+        /* display: none; */
+        visibility: hidden;
+    }
+}
