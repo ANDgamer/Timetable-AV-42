@@ -1,16 +1,15 @@
 #monday .lesson-5 .section-1,
 #monday .lesson-6 .section-1,
 #tuesday .lesson-3 .section-1,
-#wednesday .lesson-5 .section-1,
 #wednesday .lesson-6 .section-1,
+#thursday .lesson-6 .section-1,
 #friday .lesson-2 .section-1,
 #friday .lesson-3 .section-1 {
   background-color: var(--main-active-color-2);
 }
 
 body.num #monday .lesson-7 .section-1,
-body.num #thursday .lesson-5 .section-1,
-body.num #thursday .lesson-6 .section-1 {
+body.num #thursday .lesson-5 .section-1 {
   background-color: var(--main-active-color-2);
 }
 
@@ -70,12 +69,16 @@ body #tuesday .lesson-3 .section-1 a {
 
 /* Thursday */
 
-#thursday .lesson .sectionContainer {
+#thursday .lesson-5 .sectionContainer {
   grid-template-columns: 1fr;
 }
 
 #thursday .lesson .section {
   grid-column: 1/3;
+}
+
+#thursday .lesson-6 .sectionContainer {
+    grid-template-rows: 1fr;
 }
 
 /* Friday */
