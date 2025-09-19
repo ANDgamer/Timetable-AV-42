@@ -9,7 +9,8 @@
 }
 
 body.num #monday .lesson-7 .section-1,
-body.num #thursday .lesson-5 .section-1 {
+body.num #thursday .lesson-5 .section-1,
+body.num #thursday .lesson-7 .section-1 {
   background-color: var(--main-active-color-2);
 }
 
