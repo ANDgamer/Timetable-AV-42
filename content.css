@@ -1,10 +1,10 @@
 #monday .lesson-5 .section-1,
 #monday .lesson-6 .section-1,
 #tuesday .lesson-3 .section-1,
-#wednesday .lesson-6 .section-1,
 #thursday .lesson-6 .section-1,
 #friday .lesson-2 .section-1,
-#friday .lesson-3 .section-1 {
+#friday .lesson-3 .section-1,
+#friday .lesson-4 .section-1 {
   background-color: var(--main-active-color-2);
 }
 
@@ -88,7 +88,6 @@ body #tuesday .lesson-3 .section-1 a {
   grid-template-rows: 1fr;
 }
 
-#friday .lesson-2 .section-1,
-#friday .lesson-3 .section-1 {
+#friday .lesson .section {
   grid-column: 1/3;
 }
